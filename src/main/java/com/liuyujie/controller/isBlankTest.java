@@ -10,23 +10,23 @@ import java.util.HashMap;
 import java.util.Map;
 
 @RestController
-public class TestController {
-    /*public static void main(String[] args) {
+public class isBlankTest {
+    public static void main(String[] args) {
         Person person=new Person();
-        person.setAge("");
+        person.setAge(9);
         person.setLength("");
         person.setName("");
-      *//*  person.setAge("11");selectHandleWorkdayCountWebService
-        System.out.println(person.toString());*//*
+        person.setAge(11);
+        System.out.println(person.toString());
         System.out.println("2".equals("2"));
         if (StringUtils.isBlank(person.getName()) && StringUtils.isBlank(person.getName()) && StringUtils.isBlank(person.getLength())) {
             System.out.println("342343");
         }
 
 
-    }*/
+    }
 
-    @RequestMapping("/test")
+    /*@RequestMapping("/test")
     public Object test(QueryFileReqBo queryFileReqBo) {
         Map<String,String> reqMap =new HashMap<>();
         if (StringUtils.isBlank(queryFileReqBo.getOrgId()) && StringUtils.isBlank(queryFileReqBo.getOrgName()) && StringUtils.isBlank(queryFileReqBo.getUserId())) {
@@ -35,6 +35,6 @@ public class TestController {
             return reqMap;
         }
         return reqMap;
-    }
+    }*/
 
 }

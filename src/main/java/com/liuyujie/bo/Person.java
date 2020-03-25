@@ -1,9 +1,21 @@
 package com.liuyujie.bo;
 
-public class Person {
+import java.io.Serializable;
+
+public class Person implements Serializable {
     private String name;
-    private String age;
+    private int age;
     private String length;
+
+
+    public Person() {
+    }
+
+    public Person(String name, int age, String length) {
+        this.name = name;
+        this.age = age;
+        this.length = length;
+    }
 
     public String getName() {
         return name;
@@ -13,11 +25,11 @@ public class Person {
         this.name = name;
     }
 
-    public String getAge() {
+    public int getAge() {
         return age;
     }
 
-    public void setAge(String age) {
+    public void setAge(int age) {
         this.age = age;
     }
 
@@ -33,7 +45,7 @@ public class Person {
     public String toString() {
         return "Person{" +
                 "name='" + name + '\'' +
-                ", age='" + age + '\'' +
+                ", age=" + age +
                 ", length='" + length + '\'' +
                 '}';
     }
