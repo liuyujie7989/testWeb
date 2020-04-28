@@ -17,7 +17,14 @@ public class Test {
         BigDecimal bigDecimal1 = BigDecimal.valueOf((double) b / a).setScale(2, BigDecimal.ROUND_HALF_UP);
 
         //System.out.println(bigDecimal1);
+        Integer num=0;
+        for (int i = 0; i < 3; i++) {
 
+            num += Integer.parseInt("1");
+
+        }
+        System.out.println(num);
+        System.out.println("aaaa"=="aaaa");
 
 
     }

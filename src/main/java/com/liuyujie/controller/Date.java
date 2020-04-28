@@ -3,10 +3,11 @@ package com.liuyujie.controller;
 import com.liuyujie.utils.DateUtil;
 import com.ohaotian.plugin.common.util.DateUtils;
 
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 
 public class Date {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ParseException {
         /*java.util.Date startdate = DateUtils.strToDate("2020-01-19 14:23:16");
         java.util.Date enddate = DateUtils.strToDate("2020-02-05 20:55:13");
         Long days = WorkDayUtils.workdayCount("2020-01-19 14:23:16", "2020-02-05 20:55:13");
@@ -25,7 +26,11 @@ public class Date {
         java.util.Date tomorrowDate = new java.util.Date(dt.getTime() + 86400000L);
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
         temp_str = sdf.format(tomorrowDate);
+
+        java.util.Date parse = sdf.parse("0000-00-00 00:00:00");
         System.out.println(temp_str);
+        System.out.println(sdf.format(parse));
+        System.out.println(sdf.parse("0"));
 
     }
 }

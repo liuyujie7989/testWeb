@@ -71,32 +71,32 @@ public class PinYin {
 
     public static void main(String[] args) {
         String[] strings = {
-                "李亚亚",
-                "王艳",
-                "汤宝锋",
-                "年凡",
-                "赵煜西",
-                "李玉贞",
-                "袁方",
-                "李冲",
-                "刘杰",
-                "赵婧",
-                "汶小伟",
-                "吴波",
-                "刘彦明",
-                "苏国峰",
-                "马选利",
-                "孙艺民",
-                "杨祎",
-                "李翔",
-                "苗吉",
-                "陈博",
-                "孙艺民",
+                "郭旭",
+                "潘晓",
+                "巨鹏飞",
+                "李时娇",
+                "吕行",
+                "乔美美",
+                "马震",
+                "孙天路",
+                "李爽",
+                "王永超",
+                "白娜",
+                "张蕾",
+                "朱瑞",
+                "万国勋",
+                "孟婧琪",
+                "张慕尧",
+                "李射",
+                "孙珍",
+                "阮鹏超",
+                "田琴",
+
 
         };
         for (int i = 0; i < strings.length; i++) {
             String pinYinHeadChar = getPinYinHeadChar(strings[i]);
-            System.out.println("gjgwq"+pinYinHeadChar);
+            System.out.println("xzspj_"+pinYinHeadChar);
         }
 
     }

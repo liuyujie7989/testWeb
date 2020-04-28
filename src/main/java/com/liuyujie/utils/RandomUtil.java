@@ -1,4 +1,4 @@
-package com.liuyujie.service;
+package com.liuyujie.utils;
 
 
 import com.ohaotian.plugin.db.Sequence;

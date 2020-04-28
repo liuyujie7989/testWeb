@@ -16,19 +16,13 @@
    
    <!--开启注解的扫描，希望处理service和dao，controller不需要Spring框架去处理  expression注解controller的权限定名-->
    
-    <context:component-scan base-package="cn.itcast" >
+    <context:component-scan base-package="com.liuyujie" >
         <!--配置哪些注解不扫描-->
         <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller" />
     </context:component-scan>
     <!--或者直接扫描到service层   和以上扫描方式二选一-->
     <!--组件扫描配置-->
-    <context:component-scan base-package="com.itheima.service"/>
-
-
-
-
-
-
+    <context:component-scan base-package="com.liuyujie"/>
 
 	<!--加载外部数据库配置 在配置连接池中用EL表达式获取   ${key}-->
 	 <context:property-placeholder location="classpath:jdbcConfig.properties"/>
@@ -52,7 +46,7 @@
     <!--配置AccountDao接口所在包-->
 	<!--让spring生成dao接口的所在包下面的所有接口代理对象 并且纳入spring容器中-->
     <bean id="mapperScanner" class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-        <property name="basePackage" value="cn.itcast.dao"/>
+        <property name="basePackage" value="cn.liuyujie.dao"/>
     </bean>
 
     <!--配置Spring框架声明式事务管理-->
@@ -72,7 +66,7 @@
     <!--配置AOP增强 配置通用切入点表达  配置切入点表达式,给那哪些方法开启事务
     配置事务通知和切入点表达式的对印关系-->
     <aop:config>
-        <aop:advisor advice-ref="txAdvice" pointcut="execution(* cn.itcast.service.impl.*ServiceImpl.*(..))"/>
+        <aop:advisor advice-ref="txAdvice" pointcut="execution(* com.liuyujie.service.impl.*ServiceImpl.*(..))"/>
     </aop:config>
 
 </beans>
