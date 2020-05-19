@@ -30,7 +30,7 @@
     </servlet>
     <servlet-mapping>
       <servlet-name>dispatcherServlet</servlet-name>
-      <url-pattern>/</url-pattern>
+      <url-pattern>/rest/authority/*</url-pattern>
     </servlet-mapping>
 
     <!--解决中文乱码的过滤器-->

@@ -17,7 +17,6 @@ public class ComparatorUtil {
                 new Person("D", 9, "d")
         );
 
-
         Collections.sort(list, (Person o1, Person o2)-> {
             System.out.println(o1.toString());
             System.out.println(o2.toString());

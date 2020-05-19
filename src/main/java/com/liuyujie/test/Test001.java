@@ -1,19 +1,17 @@
 package com.liuyujie.test;
 
-import com.alibaba.fastjson.JSONObject;
 import com.liuyujie.bo.User;
-import org.joda.time.DateTime;
+import com.liuyujie.controller.Studets;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.io.UnsupportedEncodingException;
 import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.*;
-import java.util.stream.Collectors;
 
 public class Test001 {
     private static Logger logger = LoggerFactory.getLogger(Test001.class);
-    public static void main(String[] args) throws ParseException {
+
+    public static void main(String[] args) throws ParseException, UnsupportedEncodingException {
 
      /*   int[] array= new int[15];
 
@@ -46,7 +44,7 @@ public class Test001 {
         System.out.println(map.toString());*/
 
 
-        User user1 = null;
+      /*  User user1 = null;
 
          user1 = new User();
 
@@ -59,7 +57,22 @@ public class Test001 {
         Integer age1 = user1.getAge();
 
         System.out.println(age);
-        System.out.println(age1);
+        System.out.println(age1);*/
+
+        Integer a = 3;
+        Integer b = 4;
+        Integer c = null;
+        //  Integer result = false ? a*b  : a;
+        User user = new User();
+        Studets person = new Studets();
+        String str = "a";
+        System.out.println(person);
+        byte[] bytes = "abc".getBytes("UTF-8");
+        String str1 = "abcd";
+
+        str=str1;
+        System.out.println(str);
+        System.out.println(str1);
 
 
     }

@@ -1,25 +1,53 @@
 package com.liuyujie.test;
 
 import com.alibaba.fastjson.JSON;
-import com.alibaba.fastjson.JSONArray;
-import com.alibaba.fastjson.JSONObject;
-import com.liuyujie.bo.User;
+import com.liuyujie.bo.UserList;
+import com.liuyujie.utils.DXUtil;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class test002 {
     public static void main(String[] args) {
-        User u =new User();
-        u.setStuNo("呵呵");
-        u.setName("haa");
-        u.setAge(12);
-        u.setSchool("nn");
-        JSONObject jsonObject = (JSONObject) JSON.toJSON(u);
-        System.out.println(jsonObject.toJSONString());
-        jsonObject.put("ggg",3232);
-        System.out.println(jsonObject.toJSONString());
-        System.out.println("================================");
-        JSONObject jsonObject1 =new JSONObject();
-        jsonObject1.put("data","{\\\"code\\\":\\\"200\\\",\\\"data\\\":\\\"[{\\\\\\\"deptName\\\\\\\":\\\\\\\"96\\\\\\\",\\\\\\\"infoitemCount\\\\\\\":\\\\\\\"68200\\\\\\\",\\\\\\\"informatCount\\\\\\\":\\\\\\\"4611\\\\\\\",\\\\\\\"deptId\\\\\\\":110,\\\\\\\"id\\\\\\\":\\\\\\\"839223\\\\\\\",\\\\\\\"allCount\\\\\\\":\\\\\\\"314\\\\\\\"}]\\\"}");
-        JSONArray data = jsonObject1.getJSONArray(jsonObject1.getString("data"));
+        UserList userList = new UserList();
+
+        com.liuyujie.bo.User user = new com.liuyujie.bo.User();
+       /* com.liuyujie.bo.User user = new com.liuyujie.bo.User();
+        List<com.liuyujie.bo.User> list = new ArrayList<>();
+        list.add(user);
+        userList.setUsers(list);
+        System.out.println(userList);
+        System.out.println(userList.getUsers()==null);
+        System.out.println(user==null);*/
+
+       int a =5;
+       int b=6;
+        if (a == 5) {
+            System.out.println("1");
+        } else if (b==6) {
+            System.out.println("2");
+        }
+        com.liuyujie.bo.User user1 = new com.liuyujie.bo.User();
+
+        user1.setName("323232");
+
+        System.out.println(JSON.toJSONString(user1));
+
+        ArrayList<String> strings = new ArrayList<>();
+        strings.add("1");
+        strings.add("2");
+        strings.add("3");
+        strings.add("4");
+        strings.add("5");
+        strings.add("6");
+        strings.add("7");
+        strings.add("8");
+        strings.add("9");
+
+        List<List<String>> lists = DXUtil.splitList(strings, 4);
+        System.out.println(lists.size());
+        System.out.println(lists);
+
 
     }
 }

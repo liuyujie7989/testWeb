@@ -27,6 +27,20 @@
     <mvc:resources location="/images/" mapping="/images/**" />
     <mvc:resources location="/js/" mapping="/js/**" />
 
+    <!--配置拦截器-->
+    <mvc:interceptors>
+        <!--配置拦截器-->
+        <mvc:interceptor>
+            <!--要拦截的具体的方法-->
+            <mvc:mapping path="/org/**"/>
+            <!--不要拦截的方法
+            <mvc:exclude-mapping path="/rest/authority/auth/getUserPerms"/>
+            <mvc:exclude-mapping path="/rest/authority/cust/custUpload"/>
+    -->
+            <!--配置拦截器对象-->
+            <bean class="com.liuyujie.Interceptor.RequestInterceptor" />
+        </mvc:interceptor>
+    </mvc:interceptors>
     <!--开启SpringMVC注解的支持-->
    <mvc:annotation-driven>
 
